@@ -436,6 +436,114 @@ h3 {
   font-size: 1.05rem;
 }
 
+/* トップページ：おすすめメニューの自動横流れ */
+.recommend-lead {
+  margin: -28px 0 24px;
+  color: #756a5f;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.recommend-marquees {
+  display: grid;
+  gap: 16px;
+  overflow: hidden;
+}
+
+.menu-marquee {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+}
+
+.menu-marquee-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+
+.menu-marquee-group {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 16px;
+  padding-right: 16px;
+}
+
+.menu-marquee-left .menu-marquee-track {
+  animation: marquee-left 36s linear infinite;
+}
+
+.menu-marquee-right .menu-marquee-track {
+  animation: marquee-right 38s linear infinite;
+}
+
+.menu-marquee:hover .menu-marquee-track,
+.menu-marquee:focus-within .menu-marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes marquee-right {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+.recommend-card {
+  position: relative;
+  flex: 0 0 238px;
+  height: 166px;
+  overflow: hidden;
+  border-radius: 12px;
+  background: var(--color-dark);
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 8px 22px rgba(43, 37, 32, 0.18);
+}
+
+.recommend-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.recommend-card:hover img,
+.recommend-card:focus-visible img {
+  transform: scale(1.05);
+}
+
+.recommend-card-caption {
+  position: absolute;
+  inset: auto 0 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 36px 13px 11px;
+  background: linear-gradient(transparent, rgba(12, 10, 8, 0.9));
+  font-family: var(--font-mincho);
+  font-size: 0.9rem;
+  line-height: 1.35;
+  white-space: nowrap;
+}
+
+.recommend-card-caption > span:first-child {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.recommend-card-price {
+  flex: 0 0 auto;
+  color: #f2c5a2;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
 .menu-more {
   text-align: center;
   margin-top: 40px;
@@ -470,6 +578,127 @@ h3 {
   font-size: 0.8rem;
   color: #b8b0a4;
   margin-top: 12px;
+}
+
+/* お品書きページ */
+.menu-detail-section {
+  scroll-margin-top: 64px;
+}
+
+.menu-detail-light {
+  background: #fff;
+}
+
+.category-slider-shell {
+  position: relative;
+  margin: -12px 0 38px;
+}
+
+.category-image-slider {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(205px, 27%);
+  gap: 14px;
+  overflow-x: auto;
+  padding: 4px 2px 16px;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-color: var(--color-accent) #ddd3c6;
+  scrollbar-width: thin;
+  overscroll-behavior-inline: contain;
+}
+
+.category-slide {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  background: var(--color-dark);
+  box-shadow: 0 8px 20px rgba(43, 37, 32, 0.17);
+  scroll-snap-align: start;
+}
+
+.category-slide img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.category-slide-landscape img {
+  object-position: center;
+}
+
+.category-slide:hover img {
+  transform: scale(1.035);
+}
+
+.category-slide figcaption {
+  position: absolute;
+  inset: auto 0 0;
+  padding: 48px 13px 11px;
+  background: linear-gradient(transparent, rgba(12, 10, 8, 0.9));
+  color: #fff;
+  font-family: var(--font-mincho);
+  font-size: 0.82rem;
+  line-height: 1.35;
+  white-space: nowrap;
+}
+
+.category-slider-button {
+  position: absolute;
+  top: calc(50% - 30px);
+  z-index: 2;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(29, 26, 23, 0.92);
+  color: #fff;
+  font-size: 1.45rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.23);
+  transition: background 0.25s, opacity 0.25s, transform 0.25s;
+}
+
+.category-slider-button:hover:not(:disabled) {
+  background: var(--color-accent);
+  transform: scale(1.06);
+}
+
+.category-slider-button:disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+
+.category-slider-prev { left: -18px; }
+.category-slider-next { right: -18px; }
+
+.menu-subsection {
+  margin-top: 56px;
+  padding-top: 22px;
+  border-top: 2px solid #ddd3c6;
+}
+
+.menu-subsection-title {
+  border-left: 0;
+  padding-left: 0;
+  font-size: 1.55rem;
+  text-align: center;
+}
+
+.menu-subsection-title::after {
+  content: "";
+  display: block;
+  width: 42px;
+  height: 3px;
+  margin: 10px auto 0;
+  background: var(--color-accent);
+}
+
+.izakaya .category-slide {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.36);
 }
 
 /* 酒の肴 */
@@ -566,6 +795,24 @@ h3 {
     opacity: 1;
     transform: none;
   }
+
+  .menu-marquee {
+    overflow-x: auto;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .menu-marquee-track {
+    animation: none !important;
+  }
+
+  .menu-marquee-group[aria-hidden="true"] {
+    display: none;
+  }
+
+  .category-image-slider {
+    scroll-behavior: auto;
+  }
 }
 
 /* フッター */
@@ -660,7 +907,48 @@ h3 {
     margin-bottom: 56px;
   }
 
-  .menu-photos {
-    grid-template-columns: 1fr 1fr;
+  .recommend-lead {
+    margin-top: -24px;
+  }
+
+  .recommend-marquees {
+    margin-right: -20px;
+    margin-left: -20px;
+  }
+
+  .recommend-card {
+    flex-basis: 196px;
+    height: 138px;
+  }
+
+  .recommend-card-caption {
+    gap: 6px;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 0.75rem;
+  }
+
+  .recommend-card-price {
+    font-size: 0.66rem;
+  }
+
+  .menu-marquee-group {
+    gap: 12px;
+    padding-right: 12px;
+  }
+
+  .category-image-slider {
+    grid-auto-columns: 72%;
+    gap: 12px;
+    margin-right: -20px;
+    padding-right: 20px;
+  }
+
+  .category-slider-button {
+    display: none;
+  }
+
+  .menu-subsection {
+    margin-top: 42px;
   }
 }
