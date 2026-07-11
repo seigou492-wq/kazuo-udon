@@ -719,13 +719,15 @@ h3 {
 /* 店舗案内 */
 .access-grid {
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 40px;
+  grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
+  gap: 48px;
   align-items: start;
 }
 
-.access-grid img {
+.access-grid > img {
+  width: 100%;
   border-radius: 8px;
+  box-shadow: 0 8px 22px rgba(68, 54, 40, 0.1);
 }
 
 .info-table {
@@ -758,7 +760,7 @@ h3 {
 }
 
 .interior-guide {
-  margin-top: 64px;
+  margin: 0 0 72px;
   padding: clamp(28px, 5vw, 52px);
   background: #fff;
   border: 1px solid #e4d9ca;
@@ -1198,8 +1200,13 @@ h3 {
   }
 
   .interior-guide {
-    margin-top: 48px;
+    margin: 0 0 48px;
     padding: 24px 20px;
+  }
+
+  .access-grid > img {
+    width: min(72%, 280px);
+    justify-self: center;
   }
 
   .interior-guide-heading {
