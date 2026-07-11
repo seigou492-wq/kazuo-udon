@@ -752,6 +752,11 @@ h3 {
   color: inherit;
 }
 
+.info-notice {
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
 .interior-guide {
   margin-top: 64px;
   padding: clamp(28px, 5vw, 52px);
