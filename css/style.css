@@ -751,6 +751,24 @@ h3 {
   font-weight: 700;
 }
 
+.store-info-photo {
+  max-width: 420px;
+  margin: 36px auto 0;
+}
+
+.store-info-photo img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 8px 22px rgba(68, 54, 40, 0.12);
+}
+
+.store-info-photo figcaption {
+  margin-top: 8px;
+  color: #786b60;
+  font-size: 0.82rem;
+  text-align: center;
+}
+
 .interior-guide {
   margin: 0 0 72px;
   padding: clamp(28px, 5vw, 52px);
@@ -1197,6 +1215,11 @@ h3 {
 
   .interior-guide-heading {
     margin-bottom: 20px;
+  }
+
+  .store-info-photo {
+    width: min(82%, 320px);
+    margin-top: 28px;
   }
 
   .interior-guide-heading h3 {
