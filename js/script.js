@@ -125,7 +125,7 @@ document.querySelectorAll('[data-category-slider]').forEach((sliderShell, index)
 // （IntersectionObserverが使えない環境では何もせず、そのまま表示する）
 if ('IntersectionObserver' in window && document.visibilityState === 'visible') {
   const targets = document.querySelectorAll(
-    'h2, .about-catch, .about-intro, .feature, .recommend-marquees, .category-slider-shell, .menu-list, .access-grid, .interior-guide'
+    'h2, .about-catch, .about-intro, .feature, .recommend-marquees, .category-slider-shell, .menu-list, .access-grid, .interior-guide, .banquet-card'
   );
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
