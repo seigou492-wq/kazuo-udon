@@ -29,16 +29,22 @@
     </nav>
   </header>
 
-  <main>
+  <main id="menu-top">
     <div class="page-head">
       <p class="page-head-en">Menu</p>
       <h1>お品書き</h1>
       <p class="page-head-note">※価格は税込です。仕入れにより内容が変わる場合があります。</p>
     </div>
 
+    <nav class="menu-category-nav" aria-label="メニューカテゴリー">
+      <a href="#udon-menu"><span>01</span>うどん・ご飯</a>
+      <a href="#izakaya-menu"><span>02</span>つまみ</a>
+    </nav>
+
     <section id="udon-menu" class="menu-detail-section menu-detail-light">
       <div class="container">
         <h2><span>うどん・ご飯メニュー</span>Udon &amp; Rice</h2>
+        <p class="menu-photo-guide">写真から気になる一品を探す <span>横にスライドできます</span></p>
         <div class="category-slider-shell" data-category-slider>
           <button class="category-slider-button category-slider-prev" type="button" aria-label="前の料理写真を見る">‹</button>
           <div class="category-image-slider" tabindex="0" aria-label="うどんとご飯ものの料理写真">
@@ -49,15 +55,14 @@
             <figure class="category-slide"><img src="images/menu-retouched/nasu-bukkake.jpg" alt="ナスぶっかけうどん" loading="lazy"><figcaption>ナスぶっかけうどん</figcaption></figure>
             <figure class="category-slide"><img src="images/menu-retouched/gyusuji-udon.jpg" alt="牛すじうどん" loading="lazy"><figcaption>牛すじうどん</figcaption></figure>
             <figure class="category-slide"><img src="images/menu-retouched/abura-mazemen.jpg" alt="油まぜうどん" loading="lazy"><figcaption>油まぜうどん</figcaption></figure>
-            <figure class="category-slide category-slide-landscape"><img src="images/katudon.png" alt="カツ丼" loading="lazy"><figcaption>カツ丼</figcaption></figure>
-            <figure class="category-slide category-slide-landscape"><img src="images/IMG_1465.JPG" alt="カツ丼" loading="lazy"><figcaption>カツ丼</figcaption></figure>
+            <figure class="category-slide category-slide-landscape"><img src="images/katudon.jpg" alt="カツ丼" loading="lazy"><figcaption>カツ丼</figcaption></figure>
           </div>
           <button class="category-slider-button category-slider-next" type="button" aria-label="次の料理写真を見る">›</button>
         </div>
 
-        <div class="menu-cols">
-          <div class="menu-list">
-            <h3>うどん</h3>
+        <div class="menu-accordion-grid">
+          <details class="menu-accordion menu-list" open>
+            <summary><span>うどん</span><small>13品</small></summary>
             <dl>
               <div><dt>かけうどん</dt><dd>550円</dd></div>
               <div><dt>釜たまうどん</dt><dd>600円</dd></div>
@@ -73,46 +78,49 @@
               <div><dt>明太クリームうどん</dt><dd>850円</dd></div>
               <div><dt>和風ちゃんぽん</dt><dd>1,000円</dd></div>
             </dl>
-          </div>
+          </details>
 
-          <div class="menu-list">
-            <h3>ぶっかけうどん</h3>
+          <details class="menu-accordion menu-list">
+            <summary><span>ぶっかけうどん</span><small>4品</small></summary>
             <dl>
               <div><dt>ぶっかけうどん</dt><dd>700円</dd></div>
               <div><dt>ナスぶっかけうどん</dt><dd>800円</dd></div>
               <div><dt>山かけぶっかけうどん</dt><dd>900円</dd></div>
               <div><dt>肉ぶっかけうどん</dt><dd>1,000円</dd></div>
             </dl>
-            <h3>トッピング</h3>
+          </details>
+
+          <details class="menu-accordion menu-list">
+            <summary><span>トッピング</span><small>9種</small></summary>
             <dl>
               <div><dt>肉 / 牛すじ / いか天</dt><dd>各300円</dd></div>
               <div><dt>山かけ</dt><dd>250円</dd></div>
               <div><dt>海老天1本 / とろろ昆布 / ごぼう天</dt><dd>各200円</dd></div>
               <div><dt>卵</dt><dd>100円</dd></div>
             </dl>
-          </div>
+          </details>
         </div>
 
         <div class="menu-subsection">
           <h3 class="menu-subsection-title">ご飯もの</h3>
-          <div class="menu-cols">
-          <div class="menu-list">
-            <h3>セット</h3>
-            <dl>
-              <div class="osusume"><dt>かずおうどんセット（月替わり）</dt><dd>1,200円</dd></div>
-              <div><dt>カツ丼・とろろ昆布うどんセット</dt><dd>1,200円</dd></div>
-              <div><dt>肉吸いセット（ライス付き）</dt><dd>1,000円</dd></div>
-            </dl>
-          </div>
-          <div class="menu-list">
-            <h3>丼もの</h3>
-            <dl>
-              <div><dt>カツ丼</dt><dd>850円</dd></div>
-              <div><dt>牛丼</dt><dd>850円</dd></div>
-              <div><dt>生姜焼き丼</dt><dd>850円</dd></div>
-              <div><dt>あぶりチーズ牛丼</dt><dd>900円</dd></div>
-            </dl>
-          </div>
+          <div class="menu-accordion-grid">
+            <details class="menu-accordion menu-list" open>
+              <summary><span>セット</span><small>3品</small></summary>
+              <dl>
+                <div class="osusume"><dt>かずおうどんセット（月替わり）</dt><dd>1,200円</dd></div>
+                <div><dt>カツ丼・とろろ昆布うどんセット</dt><dd>1,200円</dd></div>
+                <div><dt>肉吸いセット（ライス付き）</dt><dd>1,000円</dd></div>
+              </dl>
+            </details>
+            <details class="menu-accordion menu-list">
+              <summary><span>丼もの</span><small>4品</small></summary>
+              <dl>
+                <div><dt>カツ丼</dt><dd>850円</dd></div>
+                <div><dt>牛丼</dt><dd>850円</dd></div>
+                <div><dt>生姜焼き丼</dt><dd>850円</dd></div>
+                <div><dt>あぶりチーズ牛丼</dt><dd>900円</dd></div>
+              </dl>
+            </details>
           </div>
         </div>
       </div>
@@ -121,6 +129,7 @@
     <section id="izakaya-menu" class="menu-detail-section izakaya">
       <div class="container">
         <h2><span>つまみメニュー</span>Izakaya Menu</h2>
+        <p class="menu-photo-guide">今夜の一杯に合わせる料理を探す <span>横にスライドできます</span></p>
         <div class="category-slider-shell" data-category-slider>
           <button class="category-slider-button category-slider-prev" type="button" aria-label="前の料理写真を見る">‹</button>
           <div class="category-image-slider" tabindex="0" aria-label="つまみメニューの料理写真">
@@ -137,9 +146,9 @@
           <button class="category-slider-button category-slider-next" type="button" aria-label="次の料理写真を見る">›</button>
         </div>
 
-        <div class="menu-cols">
-          <div class="menu-list">
-            <h3>天ぷら</h3>
+        <div class="menu-accordion-grid">
+          <details class="menu-accordion menu-list" open>
+            <summary><span>天ぷら</span><small>6品</small></summary>
             <dl>
               <div class="osusume"><dt>車エビの天ぷら（3本）</dt><dd>1,500円</dd></div>
               <div><dt>天ぷら盛り合わせ</dt><dd>1,000円</dd></div>
@@ -148,7 +157,10 @@
               <div><dt>紅しょうがの天ぷら</dt><dd>550円</dd></div>
               <div><dt>コロコロイカ天</dt><dd>500円</dd></div>
             </dl>
-            <h3>焼きもの</h3>
+          </details>
+
+          <details class="menu-accordion menu-list">
+            <summary><span>焼きもの</span><small>5品</small></summary>
             <dl>
               <div class="osusume"><dt>車エビの塩焼き</dt><dd>1,200円</dd></div>
               <div><dt>しまほっけ</dt><dd>900円</dd></div>
@@ -156,10 +168,10 @@
               <div><dt>やげんなんこつ炭火焼</dt><dd>700円</dd></div>
               <div><dt>さばの塩焼き / ぎんさけの塩焼き</dt><dd>各600円</dd></div>
             </dl>
-          </div>
+          </details>
 
-          <div class="menu-list">
-            <h3>揚げもの・一品</h3>
+          <details class="menu-accordion menu-list">
+            <summary><span>揚げもの・一品</span><small>8品</small></summary>
             <dl>
               <div><dt>いかリングフライ</dt><dd>700円</dd></div>
               <div><dt>エビマヨ / しめ鯖の炙り</dt><dd>各650円</dd></div>
@@ -170,7 +182,10 @@
               <div><dt>なんこつ唐揚げ</dt><dd>550円</dd></div>
               <div><dt>ポテトフライ</dt><dd>300円</dd></div>
             </dl>
-            <h3>サクッとおつまみ</h3>
+          </details>
+
+          <details class="menu-accordion menu-list">
+            <summary><span>サクッとおつまみ</span><small>7品</small></summary>
             <dl>
               <div><dt>ほたるイカの沖漬</dt><dd>600円</dd></div>
               <div><dt>梅なんこつ</dt><dd>600円</dd></div>
@@ -178,7 +193,7 @@
               <div><dt>エイひれあぶり</dt><dd>600円</dd></div>
               <div><dt>冷ややっこ / 枝豆 / チャンジャ</dt><dd>各300円</dd></div>
             </dl>
-          </div>
+          </details>
         </div>
 
         <div class="menu-more">

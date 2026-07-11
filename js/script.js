@@ -32,7 +32,7 @@ const recommendedMenuRows = {
     { name: '明太釜玉うどん', price: '850円', image: 'images/menu-retouched/mentai-kamatama.jpg', target: 'udon-menu' },
     { name: '肉ぶっかけうどん', price: '1,000円', image: 'images/menu-retouched/niku-bukkake.jpg', target: 'udon-menu' },
     { name: '牛すじうどん', price: '850円', image: 'images/menu-retouched/gyusuji-udon.jpg', target: 'udon-menu' },
-    { name: 'カツ丼', price: '850円', image: 'images/katudon.png', target: 'udon-menu' },
+    { name: 'カツ丼', price: '850円', image: 'images/katudon.jpg', target: 'udon-menu' },
     { name: '釜たまうどん', price: '600円', image: 'images/menu-retouched/kamatama.jpg', target: 'udon-menu' }
   ],
   left: [
@@ -119,6 +119,27 @@ document.querySelectorAll('[data-category-slider]').forEach((sliderShell, index)
   slider.addEventListener('scroll', updateButtons, { passive: true });
   window.addEventListener('resize', updateButtons, { passive: true });
   updateButtons();
+});
+
+// お品書きは、同じグループ内で一つだけ開いて縦長になりすぎないようにする
+document.querySelectorAll('.menu-accordion-grid').forEach((grid) => {
+  const accordions = grid.querySelectorAll('.menu-accordion');
+
+  if (window.matchMedia('(max-width: 768px)').matches) {
+    accordions.forEach((accordion) => {
+      accordion.open = false;
+    });
+  }
+
+  accordions.forEach((accordion) => {
+    accordion.addEventListener('toggle', () => {
+      if (!accordion.open) return;
+
+      accordions.forEach((other) => {
+        if (other !== accordion) other.open = false;
+      });
+    });
+  });
 });
 
 // スクロールに合わせて要素をふわっと表示
