@@ -121,6 +121,43 @@ document.querySelectorAll('[data-category-slider]').forEach((sliderShell, index)
   updateButtons();
 });
 
+// 店舗案内の写真ギャラリー
+document.querySelectorAll('[data-access-gallery]').forEach((gallery) => {
+  const track = gallery.querySelector('.access-gallery-track');
+  const previousButton = gallery.querySelector('.access-gallery-prev');
+  const nextButton = gallery.querySelector('.access-gallery-next');
+  const status = gallery.querySelector('.access-gallery-status');
+  const slides = gallery.querySelectorAll('.access-gallery-slide');
+
+  if (!track || !previousButton || !nextButton || !status || slides.length === 0) return;
+
+  const currentIndex = () => Math.round(track.scrollLeft / track.clientWidth);
+
+  const updateGallery = () => {
+    const index = Math.min(slides.length - 1, Math.max(0, currentIndex()));
+    status.textContent = `${index + 1} / ${slides.length}`;
+    previousButton.disabled = index === 0;
+    nextButton.disabled = index === slides.length - 1;
+  };
+
+  const moveGallery = (direction) => {
+    const destination = Math.min(
+      slides.length - 1,
+      Math.max(0, currentIndex() + direction)
+    );
+    track.scrollTo({
+      left: destination * track.clientWidth,
+      behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
+    });
+  };
+
+  previousButton.addEventListener('click', () => moveGallery(-1));
+  nextButton.addEventListener('click', () => moveGallery(1));
+  track.addEventListener('scroll', updateGallery, { passive: true });
+  window.addEventListener('resize', updateGallery, { passive: true });
+  updateGallery();
+});
+
 // スクロールに合わせて要素をふわっと表示
 // （IntersectionObserverが使えない環境では何もせず、そのまま表示する）
 if ('IntersectionObserver' in window && document.visibilityState === 'visible') {
