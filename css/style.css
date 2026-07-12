@@ -218,7 +218,7 @@ img {
 }
 
 /* セクション共通 */
-section {
+main > section {
   padding: 72px 0;
 }
 
@@ -1848,7 +1848,7 @@ h3 {
     text-align: center;
   }
 
-  section {
+  main > section {
     padding: 56px 0;
   }
 
@@ -2122,6 +2122,7 @@ h3 {
 
   .menu-detail-section h2 span {
     font-size: 1.65rem;
+    line-height: 1.45;
   }
 
   .menu-photo-guide {

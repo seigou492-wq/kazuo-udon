@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>酒処 かずおうどん｜熊本県八代市の手作りうどんと居酒屋</title>
-  <meta name="description" content="熊本県八代市本町の「酒処かずおうどん」。うどん職人歴十数年の店主が打つ本格うどんと、手作りにこだわった居酒屋メニューを深夜2時まで。名物の肉ごぼう天うどん、天草産車エビの天ぷらをどうぞ。">
-  <meta property="og:title" content="酒処 かずおうどん｜熊本県八代市">
-  <meta property="og:description" content="本格手作りうどんと居酒屋メニューを深夜2時まで。名物は肉ごぼう天うどん。">
+  <title>八代市の居酒屋とうどん｜酒処 かずおうどん</title>
+  <meta name="description" content="熊本県八代市本町の居酒屋 酒処かずおうどん 手作りの居酒屋料理と職人仕込みのうどんを18時から翌2時まで提供 宴会や貸切にも対応">
+  <meta property="og:title" content="八代市の居酒屋とうどん｜酒処 かずおうどん">
+  <meta property="og:description" content="熊本県八代市本町で手作りの居酒屋料理と職人仕込みのうどんを深夜2時まで提供">
   <meta property="og:type" content="website">
   <meta property="og:image" content="images/storefront.jpg">
   <meta property="og:locale" content="ja_JP">
@@ -19,16 +19,28 @@
     "@context": "https://schema.org",
     "@type": "Restaurant",
     "name": "酒処 かずおうどん",
-    "servesCuisine": ["うどん", "居酒屋"],
+    "description": "熊本県八代市本町で居酒屋料理と手作りうどんを提供する酒処かずおうどん",
+    "servesCuisine": ["居酒屋料理", "うどん", "和食"],
     "address": {
       "@type": "PostalAddress",
+      "postalCode": "866-0861",
       "addressRegion": "熊本県",
       "addressLocality": "八代市",
       "streetAddress": "本町1-3-30",
       "addressCountry": "JP"
     },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 32.5042107,
+      "longitude": 130.6049073
+    },
     "telephone": "+81-90-2089-8822",
-    "openingHours": "Mo,Tu,We,Th,Fr,Sa 18:00-02:00",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "18:00",
+      "closes": "02:00"
+    },
     "image": "images/storefront.jpg",
     "priceRange": "¥¥"
   }
@@ -54,158 +66,158 @@
 
     <section class="hero">
       <img src="images/storefront.jpg" alt="酒処かずおうどんの店構え" class="hero-img">
-      <div class="hero-text">
-        <p class="hero-sub">熊本県八代市本町</p>
-        <h1>旨い酒と肴。<br>締めに、うどん。</h1>
-        <p class="hero-lead">一軒目の乾杯から、飲んだあとの一杯まで。夕方6時から深夜2時まで。</p>
-        <div class="hero-actions">
+      <header class="hero-text">
+        <p class="hero-sub">熊本県八代市本町の居酒屋</p>
+        <h1>八代市の居酒屋<br>締めのうどん</h1>
+        <p class="hero-lead">一軒目の乾杯から飲んだあとの一杯まで<br>夕方6時から深夜2時まで営業</p>
+        <nav class="hero-actions" aria-label="料理メニュー">
           <a href="menu.html#izakaya-menu" class="btn">酒と肴を見る</a>
           <a href="menu.html#udon-menu" class="btn btn-outline">締めのうどんを見る</a>
-        </div>
-      </div>
+        </nav>
+      </header>
     </section>
 
     <section id="night-style" class="night-style" aria-labelledby="night-style-title">
-      <div class="night-lanterns" aria-hidden="true">
+      <p class="night-lanterns" aria-hidden="true">
         <span>酒</span>
         <span>〆</span>
-      </div>
+      </p>
       <div class="container">
-        <div class="night-style-heading">
+        <header class="night-style-heading">
           <p class="night-style-kicker">Drink, Eat &amp; Finish</p>
-          <h2 id="night-style-title"><span>呑んで、つまんで。最後は、うどん。</span>酒処かずおうどんの夜</h2>
-          <p>居酒屋として楽しむ夜も、締めの一杯を目当てに立ち寄る夜も。酒の肴とうどん、どちらにも手を抜かない店です。</p>
-        </div>
+          <h2 id="night-style-title"><span>八代市の居酒屋と<br>締めのうどん</span>酒処かずおうどんの夜</h2>
+          <p>居酒屋として楽しむ夜も締めの一杯を目当てに立ち寄る夜も<br>酒の肴とうどんのどちらにも手を抜かない店です</p>
+        </header>
 
-        <div class="night-style-grid">
+        <nav class="night-style-grid" aria-label="居酒屋料理とうどんのメニュー">
           <a class="night-style-card night-style-card-izakaya" href="menu.html#izakaya-menu">
-            <div class="night-style-media">
+            <figure class="night-style-media">
               <img src="images/menu-retouched/bottled-beer.jpg" alt="冷えた瓶ビール各種" loading="lazy">
               <img class="night-style-subphoto" src="images/menu-retouched/seseri.jpg" alt="せせりの炭火焼" loading="lazy">
-            </div>
-            <div class="night-style-card-body">
+            </figure>
+            <section class="night-style-card-body">
               <p class="night-style-number">01 <span>Izakaya</span></p>
-              <h3>今夜は、ここで一杯。</h3>
-              <p>冷えたビールに、炭火焼や天ぷら、手作りの酒の肴。仕事帰りの一杯から、仲間との宴会まで。</p>
+              <h3>八代市で今夜の一杯</h3>
+              <p>冷えたビールに炭火焼や天ぷらと手作りの酒の肴<br>仕事帰りの一杯から仲間との宴会まで</p>
               <span class="night-style-link">つまみメニューを見る</span>
-            </div>
+            </section>
           </a>
 
           <a class="night-style-card night-style-card-udon" href="menu.html#udon-menu">
-            <div class="night-style-media">
+            <figure class="night-style-media">
               <img src="images/menu-retouched/goboten-udon.jpg" alt="締めにおすすめのごぼう天うどん" loading="lazy">
-            </div>
-            <div class="night-style-card-body">
+            </figure>
+            <section class="night-style-card-body">
               <p class="night-style-number">02 <span>Udon</span></p>
-              <h3>締めまで、きちんと旨い。</h3>
-              <p>毎日引く自家製出汁と、注文を受けてから茹でる麺。飲んだあとにもするりと入る、職人仕込みの一杯です。</p>
+              <h3>締めまできちんと旨い</h3>
+              <p>毎日引く自家製出汁と注文を受けてから茹でる麺<br>飲んだあとにもするりと入る職人仕込みの一杯</p>
               <span class="night-style-link">うどんメニューを見る</span>
-            </div>
+            </section>
           </a>
-        </div>
+        </nav>
 
-        <div class="night-style-hours" aria-label="営業時間">
+        <aside class="night-style-hours" aria-label="営業時間">
           <span>夜営業</span>
           <strong>18:00 — 翌2:00</strong>
-          <small>一軒目にも、締めにも。</small>
-        </div>
+          <small>一軒目にも締めにも</small>
+        </aside>
       </div>
     </section>
 
     <section id="about" class="about">
       <div class="container">
-        <h2><span>こだわり</span>Craftsmanship</h2>
-        <p class="about-catch">職人歴十数年、一杯に宿る手仕事。</p>
-        <p class="about-intro">16歳で飲食の道に入った店主・牛田和男が、うどん職人として十数年磨いた技で一杯ずつ仕上げます。飲んだ後でもするりと入る、あっさりとした味付けが身上です。</p>
+        <h2><span>八代市の手作りうどん</span>Craftsmanship</h2>
+        <p class="about-catch">職人歴十数年の技を一杯に</p>
+        <p class="about-intro">16歳で飲食の道に入った店主 牛田和男がうどん職人として十数年磨いた技で一杯ずつ仕上げます<br>飲んだ後でもするりと入るあっさりとした味付けが身上です</p>
 
-        <div class="feature">
-          <div class="feature-photo">
+        <article class="feature">
+          <figure class="feature-photo">
             <img src="images/katsuobushi.jpg" alt="数種類のかつお節をブレンドして引く自家製出汁" loading="lazy">
-            <p class="about-vertical">十六歳、味ひとすじ</p>
-          </div>
-          <div class="feature-body">
+            <p class="about-vertical">十六歳から味ひとすじ</p>
+          </figure>
+          <section class="feature-body">
             <p class="feature-en">Dashi</p>
             <h3>自家製の出汁</h3>
-            <p>数種類のかつお節をブレンドし、毎日店で引く自家製スープ。澄んだ一番出汁の香りが、最後のひと口まで続きます。</p>
-          </div>
-        </div>
+            <p>数種類のかつお節をブレンドして毎日店で引く自家製スープ<br>澄んだ一番出汁の香りが最後のひと口まで続きます</p>
+          </section>
+        </article>
 
-        <div class="feature reverse">
-          <div class="feature-photo">
+        <article class="feature reverse">
+          <figure class="feature-photo">
             <img src="images/yudemen.jpg" alt="釜で茹で上げるうどんの麺" loading="lazy">
-          </div>
-          <div class="feature-body">
+          </figure>
+          <section class="feature-body">
             <p class="feature-en">Men</p>
-            <h3>選べる、細麺と太麺</h3>
-            <p>出汁をまとってするりと喉を通る細麺と、もちもちと食べ応えのある太麺。お好みと気分で選べます。注文を受けてから釜で茹で上げる、できたての一杯をどうぞ。</p>
-          </div>
-        </div>
+            <h3>選べる細麺と太麺</h3>
+            <p>出汁をまとってするりと喉を通る細麺ともちもちで食べ応えのある太麺<br>注文を受けてから釜で茹で上げるできたての一杯です</p>
+          </section>
+        </article>
       </div>
     </section>
 
     <section id="menu" class="menu">
       <div class="container">
-        <h2><span>おすすめメニュー</span>Recommended</h2>
+        <h2><span>居酒屋料理とうどんのおすすめ</span>Recommended</h2>
 
-        <p class="recommend-lead">今夜の一杯に合う料理と、締めに食べたいうどんをご紹介します。</p>
-        <div class="recommend-marquees" aria-label="おすすめメニュー">
-          <div class="recommend-row">
+        <p class="recommend-lead">今夜の一杯に合う料理と締めに食べたいうどんをご紹介します</p>
+        <section class="recommend-marquees" aria-label="おすすめメニュー">
+          <article class="recommend-row">
             <p class="recommend-row-label"><span>酒の肴</span>一杯目から楽しむ</p>
-            <div class="menu-marquee menu-marquee-left" data-menu-marquee="left"></div>
-          </div>
-          <div class="recommend-row">
+            <nav class="menu-marquee menu-marquee-left" data-menu-marquee="left" aria-label="おすすめの居酒屋料理"></nav>
+          </article>
+          <article class="recommend-row">
             <p class="recommend-row-label"><span>締めの一杯</span>出汁まで飲み干す</p>
-            <div class="menu-marquee menu-marquee-right" data-menu-marquee="right"></div>
-          </div>
-        </div>
+            <nav class="menu-marquee menu-marquee-right" data-menu-marquee="right" aria-label="おすすめのうどん"></nav>
+          </article>
+        </section>
 
-        <div class="menu-more">
-          <p>うどん・丼・天ぷら・酒の肴など、お品書きはまだまだあります。</p>
+        <footer class="menu-more">
+          <p>うどん 丼 天ぷら 酒の肴など豊富なお品書きをご用意しています</p>
           <a href="menu.html" class="btn">お品書きを全て見る</a>
-        </div>
+        </footer>
       </div>
     </section>
 
     <section id="banquet" class="banquet" aria-labelledby="banquet-title">
       <div class="container">
-        <div class="banquet-card">
+        <article class="banquet-card">
           <p class="banquet-kicker">宴会・貸切のご案内</p>
-          <h2 id="banquet-title"><span>宴会のご予約、承ります。</span>Banquet Reservation</h2>
-          <p class="banquet-lead">気の合う仲間とのお集まりに、手作り料理とお酒をゆっくりお楽しみください。</p>
+          <h2 id="banquet-title"><span>八代市で宴会と貸切</span>Banquet Reservation</h2>
+          <p class="banquet-lead">気の合う仲間と手作り料理やお酒をゆっくりお楽しみください</p>
 
-          <div class="banquet-plan">
-            <div class="banquet-price">
+          <section class="banquet-plan" aria-label="宴会コース内容">
+            <p class="banquet-price">
               <small>コース料金</small>
               <strong>5,000<em>円〜</em></strong>
-            </div>
+            </p>
             <ul class="banquet-includes" aria-label="コース内容">
               <li><span>料理</span><strong>10品</strong></li>
               <li><span>飲み放題</span><strong>120分</strong></li>
             </ul>
-          </div>
+          </section>
 
-          <div class="banquet-notes">
-            <p><strong>約6名様から貸切のご相談を承ります。</strong></p>
-            <p>そのほかのコースもご用意できます。人数や内容など、お気軽にお尋ねください。</p>
-          </div>
+          <aside class="banquet-notes">
+            <p><strong>約6名様から貸切のご相談を承ります</strong></p>
+            <p>そのほかのコースもご用意できます<br>人数や内容などお気軽にお尋ねください</p>
+          </aside>
 
           <a class="banquet-call" href="tel:09020898822">
             <span>ご予約・お問い合わせ</span>
             <strong>090-2089-8822</strong>
           </a>
-        </div>
+        </article>
       </div>
     </section>
 
     <section id="access" class="access">
       <div class="container">
-        <div class="interior-guide" aria-labelledby="interior-guide-title">
-          <div class="interior-guide-heading">
+        <section class="interior-guide" aria-labelledby="interior-guide-title">
+          <header class="interior-guide-heading">
             <p class="interior-guide-label">店内のご案内</p>
-            <h3 id="interior-guide-title">おひとりでも、グループでも。</h3>
-            <p>気軽に立ち寄れるカウンター席と、靴を脱いでくつろげるお座敷席をご用意しています。</p>
-          </div>
-          <div class="interior-guide-gallery">
+            <h3 id="interior-guide-title">おひとりでもグループでも</h3>
+            <p>気軽に立ち寄れるカウンター席と靴を脱いでくつろげるお座敷席をご用意しています</p>
+          </header>
+          <section class="interior-guide-gallery" aria-label="店内の座席写真">
             <figure class="interior-guide-card">
               <img src="images2/IMG_2983.JPG" alt="酒処かずおうどんのお座敷テーブル席" loading="lazy">
               <figcaption>
@@ -234,11 +246,11 @@
                 <span>おひとり様も気軽にどうぞ</span>
               </figcaption>
             </figure>
-          </div>
-        </div>
+          </section>
+        </section>
 
-        <h2><span>店舗情報</span>Information</h2>
-        <div class="access-grid">
+        <h2><span>熊本県八代市の店舗情報</span>Information</h2>
+        <section class="access-grid" aria-label="店舗詳細">
           <table class="info-table">
             <tr><th>店名</th><td>酒処 かずおうどん</td></tr>
             <tr><th>住所</th><td>〒866-0861 熊本県八代市本町1-3-30</td></tr>
@@ -246,19 +258,19 @@
             <tr><th>営業時間</th><td>18:00〜翌2:00</td></tr>
             <tr><th>定休日</th><td>日曜日・祝日</td></tr>
             <tr><th>アクセス</th><td>JR八代駅から車で約5分（本町アーケード内）</td></tr>
-            <tr><th>ご利用案内</th><td><strong class="info-notice">ワンオーダー制</strong><br>お一人様一品以上のご注文をお願いいたします。</td></tr>
+            <tr><th>ご利用案内</th><td><strong class="info-notice">ワンオーダー制</strong><br>お一人様一品以上のご注文をお願いいたします</td></tr>
             <tr><th>予約</th><td>電話にて受付</td></tr>
           </table>
-        </div>
+        </section>
 
         <figure class="store-info-photo">
           <img src="images/IMG_0294.jpg" alt="電柱横に置かれた酒処かずおうどんの店頭看板" loading="lazy">
-          <figcaption>店頭の看板を目印にお越しください。</figcaption>
+          <figcaption>店頭の看板を目印にお越しください</figcaption>
         </figure>
 
-        <div class="access-map">
+        <section class="access-map" aria-label="店舗周辺地図">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d568.0321927173524!2d130.60490727078326!3d32.504210716284646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35407f183d6bdc63%3A0xf85c3f35eaa39c62!2z44GL44Ga44GK44GG44Gp44KT!5e0!3m2!1sja!2sjp!4v1781084936377!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="酒処かずおうどんの地図"></iframe>
-        </div>
+        </section>
       </div>
     </section>
 
