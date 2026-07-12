@@ -176,6 +176,17 @@ img {
 
 .hero-lead {
   font-size: clamp(0.95rem, 2vw, 1.15rem);
+  max-width: 660px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hero-actions .btn {
+  margin-top: 28px;
 }
 
 .btn {
@@ -193,6 +204,17 @@ img {
 .btn:hover {
   background: #9e1f24;
   transform: translateY(-2px);
+}
+
+.btn-outline {
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  background: rgba(22, 18, 14, 0.42);
+  backdrop-filter: blur(4px);
+}
+
+.btn-outline:hover {
+  border-color: #fff;
+  background: rgba(22, 18, 14, 0.78);
 }
 
 /* セクション共通 */
@@ -232,6 +254,278 @@ h3 {
   border-left: 4px solid var(--color-accent);
   padding-left: 12px;
   margin: 32px 0 16px;
+}
+
+/* トップページ：居酒屋と締めのうどんを二本柱で見せる */
+.night-style {
+  position: relative;
+  overflow: hidden;
+  border-top: 5px solid var(--color-accent);
+  background:
+    radial-gradient(circle at 9% 10%, rgba(193, 39, 45, 0.2), transparent 28%),
+    linear-gradient(135deg, #171310 0%, #2a211b 55%, #1c1713 100%);
+  color: #fff;
+}
+
+.night-style::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.18;
+  background-image: repeating-linear-gradient(90deg, transparent 0 72px, rgba(255, 255, 255, 0.025) 72px 73px);
+  pointer-events: none;
+}
+
+.night-style .container {
+  position: relative;
+  z-index: 1;
+}
+
+.night-lanterns {
+  position: absolute;
+  top: -18px;
+  right: max(24px, calc((100vw - 1120px) / 2));
+  z-index: 2;
+  display: flex;
+  gap: 14px;
+  pointer-events: none;
+}
+
+.night-lanterns span {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 66px;
+  height: 92px;
+  border-top: 7px solid #2a211b;
+  border-bottom: 7px solid #2a211b;
+  border-radius: 46% 46% 42% 42%;
+  background:
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.09) 0 2px, transparent 2px 12px),
+    linear-gradient(90deg, #8f161b, #d73a3f 48%, #98191f);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.38), inset 0 0 16px rgba(255, 203, 128, 0.28);
+  color: #fff5df;
+  font-family: var(--font-mincho);
+  font-size: 1.45rem;
+  font-weight: 800;
+}
+
+.night-lanterns span::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  width: 2px;
+  height: 24px;
+  background: #2a211b;
+}
+
+.night-lanterns span:nth-child(2) {
+  transform: translateY(22px);
+  background:
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.08) 0 2px, transparent 2px 12px),
+    linear-gradient(90deg, #8e4d1b, #c8792d 48%, #87501e);
+}
+
+.night-style-heading {
+  max-width: 720px;
+  margin: 0 auto 38px;
+  text-align: center;
+}
+
+.night-style-kicker {
+  margin-bottom: 8px;
+  color: #e2ad72;
+  font-family: var(--font-mincho);
+  font-size: 0.78rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.night-style-heading h2 {
+  margin-bottom: 18px;
+  color: #e2ad72;
+}
+
+.night-style-heading h2 span {
+  color: #fff;
+  font-size: clamp(1.65rem, 3.2vw, 2.25rem);
+  letter-spacing: 0.05em;
+  text-transform: none;
+}
+
+.night-style-heading h2 span::after {
+  background: #d8a25f;
+}
+
+.night-style-heading > p:last-child {
+  color: #c9beb2;
+  line-height: 2;
+}
+
+.night-style-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.night-style-card {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  background: #f8f1e7;
+  color: var(--color-text);
+  text-decoration: none;
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.32);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.night-style-card:hover,
+.night-style-card:focus-visible {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 52px rgba(0, 0, 0, 0.42);
+}
+
+.night-style-media {
+  position: relative;
+  min-height: 0;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  background: #201813;
+}
+
+.night-style-media > img:first-child {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.night-style-card:hover .night-style-media > img:first-child,
+.night-style-card:focus-visible .night-style-media > img:first-child {
+  transform: scale(1.035);
+}
+
+.night-style-card-izakaya .night-style-media > img:first-child {
+  object-position: center 61%;
+}
+
+.night-style-subphoto {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  width: 36%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border: 4px solid #f8f1e7;
+  border-radius: 50%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.38);
+}
+
+.night-style-card-body {
+  position: relative;
+  padding: 26px 28px 28px;
+}
+
+.night-style-card-izakaya .night-style-card-body {
+  border-top: 4px solid var(--color-accent);
+}
+
+.night-style-card-udon .night-style-card-body {
+  border-top: 4px solid #b7782d;
+}
+
+.night-style-number {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-accent);
+  font-family: var(--font-mincho);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.night-style-card-udon .night-style-number {
+  color: #9a5d1f;
+}
+
+.night-style-number span {
+  font-size: 0.68rem;
+  letter-spacing: 0.25em;
+}
+
+.night-style-card h3 {
+  border: 0;
+  padding: 0;
+  margin: 8px 0 10px;
+  font-size: clamp(1.3rem, 2.5vw, 1.65rem);
+}
+
+.night-style-card-body > p:not(.night-style-number) {
+  color: #6f6358;
+  font-size: 0.9rem;
+  line-height: 1.9;
+}
+
+.night-style-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  color: var(--color-accent);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.night-style-card-udon .night-style-link {
+  color: #8d541c;
+}
+
+.night-style-link::after {
+  content: "→";
+  transition: transform 0.25s ease;
+}
+
+.night-style-card:hover .night-style-link::after,
+.night-style-card:focus-visible .night-style-link::after {
+  transform: translateX(5px);
+}
+
+.night-style-hours {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  width: fit-content;
+  margin: 34px auto 0;
+  padding: 10px 24px;
+  border: 1px solid rgba(226, 173, 114, 0.42);
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.22);
+}
+
+.night-style-hours span {
+  padding: 2px 9px;
+  border-radius: 999px;
+  background: var(--color-accent);
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.night-style-hours strong {
+  color: #fff7e9;
+  font-family: var(--font-mincho);
+  font-size: 1.15rem;
+  letter-spacing: 0.08em;
+}
+
+.night-style-hours small {
+  color: #bdb0a4;
+  font-size: 0.72rem;
 }
 
 /* こだわり */
@@ -446,8 +740,35 @@ h3 {
 
 .recommend-marquees {
   display: grid;
-  gap: 16px;
+  gap: 22px;
   overflow: hidden;
+}
+
+.recommend-row {
+  min-width: 0;
+}
+
+.recommend-row-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 8px 4px;
+  color: #8a7e72;
+  font-size: 0.74rem;
+}
+
+.recommend-row-label span {
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: var(--color-dark);
+  color: #fff;
+  font-family: var(--font-mincho);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+}
+
+.recommend-row:first-child .recommend-row-label span {
+  background: var(--color-accent);
 }
 
 .menu-marquee {
@@ -1362,7 +1683,169 @@ h3 {
   }
 
   .hero {
-    height: 70vh;
+    height: 76vh;
+    min-height: 600px;
+  }
+
+  .hero-text {
+    padding: 0 20px 48px;
+  }
+
+  .hero-text h1 {
+    font-size: clamp(2rem, 10vw, 2.75rem);
+    line-height: 1.35;
+  }
+
+  .hero-lead {
+    max-width: 340px;
+    font-size: 0.88rem;
+    line-height: 1.75;
+  }
+
+  .hero-actions {
+    width: 100%;
+    gap: 8px;
+  }
+
+  .hero-actions .btn {
+    flex: 1 1 145px;
+    margin-top: 20px;
+    padding: 10px 14px;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  .night-style {
+    padding-top: 68px;
+  }
+
+  .night-lanterns {
+    top: -12px;
+    right: 14px;
+    gap: 8px;
+    opacity: 0.8;
+  }
+
+  .night-lanterns span {
+    width: 42px;
+    height: 60px;
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+    font-size: 0.95rem;
+  }
+
+  .night-lanterns span::before {
+    height: 18px;
+  }
+
+  .night-lanterns span:nth-child(2) {
+    transform: translateY(14px);
+  }
+
+  .night-style-heading {
+    margin-bottom: 26px;
+    padding-right: 28px;
+    text-align: left;
+  }
+
+  .night-style-heading h2 {
+    margin-bottom: 14px;
+    text-align: left;
+  }
+
+  .night-style-heading h2 span {
+    font-size: 1.55rem;
+    line-height: 1.55;
+  }
+
+  .night-style-heading h2 span::after {
+    margin: 12px 0 0;
+  }
+
+  .night-style-heading > p:last-child {
+    font-size: 0.84rem;
+    line-height: 1.8;
+  }
+
+  .night-style-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .night-style-card {
+    grid-template-columns: 42% 58%;
+    grid-template-rows: 1fr;
+    min-height: 244px;
+    border-radius: 12px;
+  }
+
+  .night-style-media {
+    height: 100%;
+    aspect-ratio: auto;
+  }
+
+  .night-style-card-udon .night-style-media > img:first-child {
+    object-position: 49% center;
+  }
+
+  .night-style-subphoto {
+    right: 8px;
+    bottom: 10px;
+    width: 54%;
+    border-width: 3px;
+  }
+
+  .night-style-card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 16px 14px;
+  }
+
+  .night-style-card-izakaya .night-style-card-body,
+  .night-style-card-udon .night-style-card-body {
+    border-top: 0;
+    border-left: 3px solid var(--color-accent);
+  }
+
+  .night-style-card-udon .night-style-card-body {
+    border-left-color: #b7782d;
+  }
+
+  .night-style-number {
+    font-size: 0.62rem;
+  }
+
+  .night-style-card h3 {
+    margin: 6px 0 8px;
+    font-size: 1.08rem;
+    line-height: 1.55;
+  }
+
+  .night-style-card-body > p:not(.night-style-number) {
+    font-size: 0.72rem;
+    line-height: 1.7;
+  }
+
+  .night-style-link {
+    margin-top: 12px;
+    font-size: 0.7rem;
+  }
+
+  .night-style-hours {
+    flex-wrap: wrap;
+    gap: 4px 10px;
+    margin-top: 22px;
+    padding: 8px 14px;
+  }
+
+  .night-style-hours strong {
+    font-size: 0.96rem;
+  }
+
+  .night-style-hours small {
+    flex-basis: 100%;
+    text-align: center;
   }
 
   section {
@@ -1575,6 +2058,10 @@ h3 {
   .recommend-marquees {
     margin-right: -20px;
     margin-left: -20px;
+  }
+
+  .recommend-row-label {
+    margin-left: 20px;
   }
 
   .recommend-card {

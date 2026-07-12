@@ -36,6 +36,7 @@ const recommendedMenuRows = {
     { name: '釜たまうどん', price: '600円', image: 'images/menu-retouched/kamatama.jpg', target: 'udon-menu' }
   ],
   left: [
+    { name: '瓶ビール各種', price: '乾杯に', image: 'images/menu-retouched/bottled-beer.jpg', target: 'izakaya-menu' },
     { name: 'せせりの炭火焼', price: '700円', image: 'images/menu-retouched/seseri.jpg', target: 'izakaya-menu' },
     { name: '牛スジの煮込み', price: '600円', image: 'images/menu-retouched/gyusuji-nikomi.jpg', target: 'izakaya-menu' },
     { name: 'チーズボール', price: '650円', image: 'images/menu-retouched/cheese-balls.jpg', target: 'izakaya-menu' },
@@ -146,7 +147,7 @@ document.querySelectorAll('.menu-accordion-grid').forEach((grid) => {
 // （IntersectionObserverが使えない環境では何もせず、そのまま表示する）
 if ('IntersectionObserver' in window && document.visibilityState === 'visible') {
   const targets = document.querySelectorAll(
-    'h2, .about-catch, .about-intro, .feature, .recommend-marquees, .category-slider-shell, .menu-list, .access-grid, .interior-guide, .banquet-card'
+    'h2, .night-style-heading, .night-style-card, .night-style-hours, .about-catch, .about-intro, .feature, .recommend-marquees, .category-slider-shell, .menu-list, .access-grid, .interior-guide, .banquet-card'
   );
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
