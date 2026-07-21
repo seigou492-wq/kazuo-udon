@@ -129,7 +129,7 @@ document.querySelectorAll('[data-category-slider]').forEach((sliderShell, index)
 // （IntersectionObserverが使えない環境では何もせず、そのまま表示する）
 if ('IntersectionObserver' in window && document.visibilityState === 'visible') {
   const targets = document.querySelectorAll(
-    'h2, .night-style-heading, .night-style-card, .night-style-hours, .about-catch, .about-intro, .feature, .recommend-marquees, .category-slider-shell, .menu-list, .access-grid, .interior-guide, .banquet-card'
+    'h2, .night-style-heading, .night-style-card, .night-style-hours, .about-catch, .about-intro, .feature, .recommend-marquees, .category-slider-shell, .menu-list, .access-details, .interior-guide, .banquet-card'
   );
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
