@@ -12,7 +12,7 @@
   <meta property="og:locale" content="ja_JP">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Shippori+Mincho:wght@600;800&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script type="application/ld+json">
   {
@@ -64,17 +64,42 @@
 
   <main id="top">
 
-    <section class="hero">
-      <img src="images/storefront.jpg" alt="酒処かずおうどんの店構え" class="hero-img">
+    <section class="hero" aria-labelledby="hero-title">
       <header class="hero-text">
-        <p class="hero-sub">熊本県八代市本町</p>
-        <h1>居酒屋で一杯<br>締めは職人うどん</h1>
-        <p class="hero-lead">一軒目の乾杯から飲んだあとの一杯まで<br>夕方6時から深夜2時まで営業</p>
+        <p class="hero-kicker"><span>Kazuo Udon</span>Yatsushiro, Kumamoto</p>
+        <p class="hero-sub">酒も、肴も、締めも。</p>
+        <h1 id="hero-title"><span>呑んで、つまんで。</span><span>最後はうどん。</span></h1>
+        <p class="hero-lead">一軒目の乾杯から、飲んだあとの一杯まで。<br>出汁まできちんと旨い、八代の夜。</p>
         <nav class="hero-actions" aria-label="料理メニュー">
           <a href="menu.html#izakaya-menu" class="btn">酒と肴を見る</a>
           <a href="menu.html#udon-menu" class="btn btn-outline">締めのうどんを見る</a>
         </nav>
+        <dl class="hero-info" aria-label="営業時間と定休日">
+          <div><dt>Open</dt><dd>18:00 — 翌2:00</dd></div>
+          <div><dt>Closed</dt><dd>日曜・祝日</dd></div>
+        </dl>
       </header>
+
+      <div class="hero-visual">
+        <figure class="hero-photo hero-photo-main">
+          <img src="images/storefront.jpg" alt="夜に灯りがともる酒処かずおうどんの店構え" class="hero-img">
+        </figure>
+        <figure class="hero-photo hero-photo-beer">
+          <img src="images/menu-retouched/bottled-beer.jpg" alt="冷えた瓶ビール">
+          <figcaption>今夜の一杯</figcaption>
+        </figure>
+        <figure class="hero-photo hero-photo-food">
+          <img src="images/menu-retouched/seseri.jpg" alt="せせりの炭火焼">
+          <figcaption>酒の肴</figcaption>
+        </figure>
+        <figure class="hero-photo hero-photo-udon">
+          <img src="images/menu-retouched/goboten-udon.jpg" alt="ごぼう天うどん">
+          <figcaption>締めのうどん</figcaption>
+        </figure>
+        <p class="hero-scene-label" aria-hidden="true"><span>熊本・八代本町</span><strong>酒処</strong></p>
+      </div>
+
+      <a class="hero-scroll" href="#night-style"><span>Scroll</span></a>
     </section>
 
     <section id="night-style" class="night-style" aria-labelledby="night-style-title">

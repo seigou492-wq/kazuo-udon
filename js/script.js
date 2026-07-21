@@ -122,26 +122,8 @@ document.querySelectorAll('[data-category-slider]').forEach((sliderShell, index)
   updateButtons();
 });
 
-// お品書きは、同じグループ内で一つだけ開いて縦長になりすぎないようにする
-document.querySelectorAll('.menu-accordion-grid').forEach((grid) => {
-  const accordions = grid.querySelectorAll('.menu-accordion');
-
-  if (window.matchMedia('(max-width: 768px)').matches) {
-    accordions.forEach((accordion) => {
-      accordion.open = false;
-    });
-  }
-
-  accordions.forEach((accordion) => {
-    accordion.addEventListener('toggle', () => {
-      if (!accordion.open) return;
-
-      accordions.forEach((other) => {
-        if (other !== accordion) other.open = false;
-      });
-    });
-  });
-});
+// お品書きのタブは、それぞれ独立して開閉する。
+// 別の「＋」を押しても、すでに開いたタブはそのまま表示しておく。
 
 // スクロールに合わせて要素をふわっと表示
 // （IntersectionObserverが使えない環境では何もせず、そのまま表示する）
