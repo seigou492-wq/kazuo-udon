@@ -3,8 +3,7 @@
   --color-text: #2b2520;
   --color-accent: #c1272d;
   --color-dark: #1d1a17;
-  --font-main: "Noto Sans JP", sans-serif;
-  --font-mincho: var(--font-main);
+  --font-mincho: "Shippori Mincho", serif;
 }
 
 * {
@@ -19,7 +18,7 @@ html {
 }
 
 body {
-  font-family: var(--font-main);
+  font-family: "Noto Sans JP", sans-serif;
   color: var(--color-text);
   background: var(--color-bg);
   line-height: 1.8;
@@ -137,7 +136,7 @@ img {
   z-index: -1;
   opacity: 0.055;
   color: #fff;
-  font-family: var(--font-main);
+  font-family: Arial, sans-serif;
   font-size: clamp(6rem, 15vw, 14rem);
   font-weight: 900;
   line-height: 0.72;
@@ -181,7 +180,7 @@ img {
   align-items: center;
   gap: 14px;
   margin-bottom: clamp(28px, 5vh, 48px);
-  font-family: var(--font-main);
+  font-family: Arial, sans-serif;
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.2em;
@@ -287,7 +286,7 @@ img {
 
 .hero-info dt {
   color: #f5cf8c;
-  font-family: var(--font-main);
+  font-family: Arial, sans-serif;
   font-size: 0.62rem;
   font-weight: 700;
   letter-spacing: 0.15em;
@@ -424,7 +423,7 @@ img {
   left: 50%;
   z-index: 5;
   color: rgba(255, 255, 255, 0.8);
-  font-family: var(--font-main);
+  font-family: Arial, sans-serif;
   font-size: 0.58rem;
   font-weight: 700;
   letter-spacing: 0.18em;
@@ -1122,7 +1121,7 @@ h3 {
 .recommend-card-price {
   flex: 0 0 auto;
   color: #f2c5a2;
-  font-family: var(--font-main);
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 0.76rem;
   font-weight: 700;
 }
@@ -1211,7 +1210,7 @@ h3 {
 
 .menu-category-nav span {
   color: var(--color-accent);
-  font-family: var(--font-main);
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 0.68rem;
   font-weight: 700;
 }
@@ -1368,7 +1367,7 @@ h3 {
   border-radius: 999px;
   background: #f2e8dd;
   color: #806f61;
-  font-family: var(--font-main);
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 0.68rem;
   font-weight: 700;
 }
@@ -1382,7 +1381,7 @@ h3 {
   border-radius: 50%;
   background: var(--color-accent);
   color: #fff;
-  font-family: var(--font-main);
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 1rem;
   line-height: 1;
 }
@@ -2704,7 +2703,7 @@ main > section:not(.hero) {
 }
 
 .hero-photo-main figcaption span {
-  font-family: var(--font-main);
+  font-family: Arial, sans-serif;
   font-size: 0.6rem;
   font-weight: 700;
   letter-spacing: 0.18em;
@@ -2740,7 +2739,7 @@ main > section:not(.hero) {
   display: block;
   margin-bottom: 8px;
   color: #9b8b7c;
-  font-family: var(--font-main);
+  font-family: Arial, sans-serif;
   font-size: 0.66rem;
   font-weight: 700;
   letter-spacing: 0.22em;
@@ -2981,7 +2980,7 @@ main > section:not(.hero) {
   bottom: -0.24em;
   opacity: 0.06;
   color: #fff;
-  font-family: var(--font-main);
+  font-family: Arial, sans-serif;
   font-size: clamp(8rem, 24vw, 20rem);
   font-weight: 900;
   letter-spacing: -0.08em;
@@ -2994,7 +2993,7 @@ main > section:not(.hero) {
 
 .page-head-en {
   color: #f5cf8c;
-  font-family: var(--font-main);
+  font-family: Arial, sans-serif;
   font-size: 0.7rem;
   font-weight: 700;
 }
@@ -3303,7 +3302,7 @@ summary:focus-visible {
 
 .hero-sub {
   display: block;
-  font-family: var(--font-main);
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 0.9rem;
   font-weight: 400;
   letter-spacing: 0.2em;
