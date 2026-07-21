@@ -59,6 +59,10 @@ img {
   backdrop-filter: blur(12px);
 }
 
+.header-home {
+  justify-content: flex-end;
+}
+
 .header-logo {
   font-family: var(--font-mincho);
   font-weight: 800;
@@ -533,50 +537,18 @@ h3 {
   z-index: 1;
 }
 
-.night-lanterns {
+.night-character {
   position: absolute;
-  top: -18px;
-  right: max(24px, calc((100vw - 1120px) / 2));
-  z-index: 2;
-  display: flex;
-  gap: 14px;
+  right: max(-72px, calc((100vw - 1380px) / 2));
+  bottom: 38px;
+  z-index: 0;
+  width: clamp(300px, 31vw, 500px);
+  max-width: none;
+  opacity: 0.16;
+  filter: saturate(0.82) contrast(0.96);
+  transform: translateX(20%);
   pointer-events: none;
-}
-
-.night-lanterns span {
-  position: relative;
-  display: grid;
-  place-items: center;
-  width: 66px;
-  height: 92px;
-  border-top: 7px solid #2a211b;
-  border-bottom: 7px solid #2a211b;
-  border-radius: 46% 46% 42% 42%;
-  background:
-    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.09) 0 2px, transparent 2px 12px),
-    linear-gradient(90deg, #8f161b, #d73a3f 48%, #98191f);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.38), inset 0 0 16px rgba(255, 203, 128, 0.28);
-  color: #fff5df;
-  font-family: var(--font-mincho);
-  font-size: 1.45rem;
-  font-weight: 800;
-}
-
-.night-lanterns span::before {
-  content: "";
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  width: 2px;
-  height: 24px;
-  background: #2a211b;
-}
-
-.night-lanterns span:nth-child(2) {
-  transform: translateY(22px);
-  background:
-    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.08) 0 2px, transparent 2px 12px),
-    linear-gradient(90deg, #8e4d1b, #c8792d 48%, #87501e);
+  user-select: none;
 }
 
 .night-style-heading {
@@ -2118,27 +2090,12 @@ h3 {
     padding-top: 68px;
   }
 
-  .night-lanterns {
-    top: -12px;
-    right: 14px;
-    gap: 8px;
-    opacity: 0.8;
-  }
-
-  .night-lanterns span {
-    width: 42px;
-    height: 60px;
-    border-top-width: 5px;
-    border-bottom-width: 5px;
-    font-size: 0.95rem;
-  }
-
-  .night-lanterns span::before {
-    height: 18px;
-  }
-
-  .night-lanterns span:nth-child(2) {
-    transform: translateY(14px);
+  .night-character {
+    right: -72px;
+    bottom: 126px;
+    width: 270px;
+    opacity: 0.11;
+    transform: none;
   }
 
   .night-style-heading {
