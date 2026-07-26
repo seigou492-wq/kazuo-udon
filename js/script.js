@@ -29,6 +29,7 @@ window.addEventListener('scroll', onScroll, { passive: true });
 const recommendedMenuRows = {
   right: [
     { name: 'ごぼう天うどん', price: '700円', image: 'images/menu-retouched/goboten-udon.jpg', target: 'udon-menu' },
+    { name: '背徳うどん', price: '1,200円', image: 'images/menu-retouched/haitoku-udon.jpg', target: 'udon-menu' },
     { name: '明太釜玉うどん', price: '850円', image: 'images/menu-retouched/mentai-kamatama.jpg', target: 'udon-menu' },
     { name: '肉ぶっかけうどん', price: '1,000円', image: 'images/menu-retouched/niku-bukkake.jpg', target: 'udon-menu' },
     { name: '牛すじうどん', price: '850円', image: 'images/menu-retouched/gyusuji-udon.jpg', target: 'udon-menu' },

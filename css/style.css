@@ -623,11 +623,11 @@ h3 {
 }
 
 .night-style-card-udon .night-style-media {
-  background: #b8794d;
+  background: #201813;
 }
 
 .night-style-card-udon .night-style-media > img:first-child {
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
 }
 
@@ -1231,6 +1231,22 @@ h3 {
 
 .category-slide-landscape img {
   object-position: center;
+}
+
+.category-slide-featured::before {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 1;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--color-accent);
+  color: #fff;
+  content: "おすすめ";
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  box-shadow: 0 4px 12px rgba(43, 37, 32, 0.24);
 }
 
 .category-slide:hover img {
