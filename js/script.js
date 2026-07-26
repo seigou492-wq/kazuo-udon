@@ -25,6 +25,39 @@ const onScroll = () => {
 onScroll();
 window.addEventListener('scroll', onScroll, { passive: true });
 
+// トップページのおすすめメニューを矢印ボタンで横に送る
+document.querySelectorAll('[data-recommend-slider]').forEach((sliderShell, index) => {
+  const slider = sliderShell.querySelector('.menu-marquee');
+  const previousButton = sliderShell.querySelector('.recommend-slider-prev');
+  const nextButton = sliderShell.querySelector('.recommend-slider-next');
+
+  if (!slider || !previousButton || !nextButton) return;
+
+  slider.id = `recommend-slider-${index + 1}`;
+  previousButton.setAttribute('aria-controls', slider.id);
+  nextButton.setAttribute('aria-controls', slider.id);
+
+  const updateButtons = () => {
+    const start = parseFloat(window.getComputedStyle(slider).paddingLeft) || 0;
+    const end = slider.scrollWidth - slider.clientWidth - 2;
+    previousButton.disabled = slider.scrollLeft <= start + 2;
+    nextButton.disabled = slider.scrollLeft >= end;
+  };
+
+  const moveSlider = (direction) => {
+    slider.scrollBy({
+      left: direction * slider.clientWidth * 0.84,
+      behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
+    });
+  };
+
+  previousButton.addEventListener('click', () => moveSlider(-1));
+  nextButton.addEventListener('click', () => moveSlider(1));
+  slider.addEventListener('scroll', updateButtons, { passive: true });
+  window.addEventListener('resize', updateButtons, { passive: true });
+  updateButtons();
+});
+
 // お品書きページの料理写真スライダー
 document.querySelectorAll('[data-category-slider]').forEach((sliderShell, index) => {
   const slider = sliderShell.querySelector('.category-image-slider');

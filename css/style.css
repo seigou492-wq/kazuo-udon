@@ -990,30 +990,6 @@ h3 {
   background: var(--color-accent);
 }
 
-.recommend-swipe-hint {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  margin-left: auto;
-  color: var(--color-accent);
-  font-size: 0.68rem;
-  font-weight: 700;
-  white-space: nowrap;
-}
-
-.recommend-swipe-hint span {
-  display: grid;
-  width: 24px;
-  height: 24px;
-  place-items: center;
-  border-radius: 50%;
-  background: var(--color-accent);
-  color: #fff;
-  font-size: 0.9rem;
-  line-height: 1;
-  box-shadow: 0 3px 9px rgba(193, 39, 45, 0.22);
-}
-
 .menu-marquee {
   display: flex;
   gap: 16px;
@@ -1025,6 +1001,50 @@ h3 {
   scrollbar-width: thin;
   overscroll-behavior-inline: contain;
   -webkit-overflow-scrolling: touch;
+}
+
+.recommend-slider-shell {
+  position: relative;
+}
+
+.recommend-slider-button {
+  position: absolute;
+  top: calc(50% - 7px);
+  z-index: 3;
+  display: grid;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  place-items: center;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  background: rgba(29, 26, 23, 0.92);
+  color: #fff;
+  font-size: 1.55rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.34);
+  transform: translateY(-50%);
+  transition: background 0.2s, opacity 0.2s, transform 0.2s;
+}
+
+.recommend-slider-button:hover:not(:disabled),
+.recommend-slider-button:focus-visible:not(:disabled) {
+  background: var(--color-accent);
+  transform: translateY(-50%) scale(1.06);
+}
+
+.recommend-slider-button:disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.recommend-slider-prev {
+  left: 10px;
+}
+
+.recommend-slider-next {
+  right: 10px;
 }
 
 .recommend-card {
@@ -2428,6 +2448,22 @@ h3 {
 
   .menu-marquee::-webkit-scrollbar {
     display: none;
+  }
+
+  .recommend-slider-button {
+    top: calc(50% - 6px);
+    width: 38px;
+    height: 38px;
+    border-width: 1px;
+    font-size: 1.35rem;
+  }
+
+  .recommend-slider-prev {
+    left: 8px;
+  }
+
+  .recommend-slider-next {
+    right: 8px;
   }
 
   .page-head {

@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Shippori+Mincho:wght@600;800&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20260726-2">
+  <link rel="stylesheet" href="css/style.css?v=20260726-3">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -157,8 +157,9 @@
         <p class="recommend-lead">今夜の一杯に合う料理と締めに食べたいうどんをご紹介します</p>
         <section class="recommend-marquees" aria-label="おすすめメニュー">
           <article class="recommend-row">
-            <p class="recommend-row-label"><span>酒の肴</span>一杯目から楽しむ <small class="recommend-swipe-hint">横へスライド <span aria-hidden="true">→</span></small></p>
-            <nav class="menu-marquee" aria-label="おすすめの居酒屋料理">
+            <p class="recommend-row-label"><span>酒の肴</span>一杯目から楽しむ</p>
+            <div class="recommend-slider-shell" data-recommend-slider>
+              <nav class="menu-marquee" aria-label="おすすめの居酒屋料理">
               <a class="recommend-card" href="menu.html#izakaya-menu">
                 <img src="images/recommend-thumbs/bottled-beer.jpg" alt="瓶ビール各種" decoding="async">
                 <span class="recommend-card-caption"><span>瓶ビール各種</span><span class="recommend-card-price">乾杯に</span></span>
@@ -187,11 +188,15 @@
                 <img src="images/recommend-thumbs/eihire.jpg" alt="エイひれあぶり" loading="lazy" decoding="async">
                 <span class="recommend-card-caption"><span>エイひれあぶり</span><span class="recommend-card-price">600円</span></span>
               </a>
-            </nav>
+              </nav>
+              <button class="recommend-slider-button recommend-slider-prev" type="button" aria-label="前のおすすめ料理を見る">‹</button>
+              <button class="recommend-slider-button recommend-slider-next" type="button" aria-label="次のおすすめ料理を見る">›</button>
+            </div>
           </article>
           <article class="recommend-row">
-            <p class="recommend-row-label"><span>締めの一杯</span>出汁まで飲み干す <small class="recommend-swipe-hint">横へスライド <span aria-hidden="true">→</span></small></p>
-            <nav class="menu-marquee" aria-label="おすすめのうどん">
+            <p class="recommend-row-label"><span>締めの一杯</span>出汁まで飲み干す</p>
+            <div class="recommend-slider-shell" data-recommend-slider>
+              <nav class="menu-marquee" aria-label="おすすめのうどん">
               <a class="recommend-card" href="menu.html#udon-menu">
                 <img src="images/recommend-thumbs/goboten-udon.jpg" alt="ごぼう天うどん" decoding="async">
                 <span class="recommend-card-caption"><span>ごぼう天うどん</span><span class="recommend-card-price">700円</span></span>
@@ -220,7 +225,10 @@
                 <img src="images/recommend-thumbs/kamatama.jpg" alt="釜たまうどん" loading="lazy" decoding="async">
                 <span class="recommend-card-caption"><span>釜たまうどん</span><span class="recommend-card-price">600円</span></span>
               </a>
-            </nav>
+              </nav>
+              <button class="recommend-slider-button recommend-slider-prev" type="button" aria-label="前のおすすめうどんを見る">‹</button>
+              <button class="recommend-slider-button recommend-slider-next" type="button" aria-label="次のおすすめうどんを見る">›</button>
+            </div>
           </article>
         </section>
 
@@ -339,6 +347,6 @@
     <p class="copyright">&copy; 2026 Kazuo Udon</p>
   </footer>
 
-  <script src="js/script.js?v=20260726-2"></script>
+  <script src="js/script.js?v=20260726-3"></script>
 </body>
 </html>
