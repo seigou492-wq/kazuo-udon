@@ -949,7 +949,7 @@ h3 {
   font-size: 1.05rem;
 }
 
-/* トップページ：おすすめメニューの自動横流れ */
+/* トップページ：おすすめメニューの横スライド */
 .recommend-lead {
   margin: -28px 0 24px;
   color: #756a5f;
@@ -991,45 +991,16 @@ h3 {
 }
 
 .menu-marquee {
-  overflow: hidden;
-  -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
-  mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
-}
-
-.menu-marquee-track {
   display: flex;
-  width: max-content;
-  will-change: transform;
-}
-
-.menu-marquee-group {
-  display: flex;
-  flex: 0 0 auto;
   gap: 16px;
-  padding-right: 16px;
-}
-
-.menu-marquee-left .menu-marquee-track {
-  animation: marquee-left 36s linear infinite;
-}
-
-.menu-marquee-right .menu-marquee-track {
-  animation: marquee-right 38s linear infinite;
-}
-
-.menu-marquee:hover .menu-marquee-track,
-.menu-marquee:focus-within .menu-marquee-track {
-  animation-play-state: paused;
-}
-
-@keyframes marquee-left {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-
-@keyframes marquee-right {
-  from { transform: translateX(-50%); }
-  to { transform: translateX(0); }
+  overflow-x: auto;
+  padding: 4px 4px 14px;
+  scroll-behavior: smooth;
+  scroll-snap-type: x proximity;
+  scrollbar-color: var(--color-accent) #e7ddd2;
+  scrollbar-width: thin;
+  overscroll-behavior-inline: contain;
+  -webkit-overflow-scrolling: touch;
 }
 
 .recommend-card {
@@ -1042,6 +1013,7 @@ h3 {
   color: #fff;
   text-decoration: none;
   box-shadow: 0 8px 22px rgba(43, 37, 32, 0.18);
+  scroll-snap-align: start;
 }
 
 .recommend-card img {
@@ -1835,16 +1807,9 @@ h3 {
 
   .menu-marquee {
     overflow-x: auto;
+    scroll-behavior: auto;
     -webkit-mask-image: none;
     mask-image: none;
-  }
-
-  .menu-marquee-track {
-    animation: none !important;
-  }
-
-  .menu-marquee-group[aria-hidden="true"] {
-    display: none;
   }
 
   .category-image-slider {
@@ -2430,9 +2395,14 @@ h3 {
     font-size: 0.66rem;
   }
 
-  .menu-marquee-group {
+  .menu-marquee {
     gap: 12px;
-    padding-right: 12px;
+    padding: 4px 20px 12px;
+    scrollbar-width: none;
+  }
+
+  .menu-marquee::-webkit-scrollbar {
+    display: none;
   }
 
   .page-head {
